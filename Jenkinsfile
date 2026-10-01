@@ -12,7 +12,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'python -m py_compile app.py'
+                bat 'C:\\Users\\madhu\\AppData\\Local\\Programs\\Python\\Python312\\python.exe py_compile app.py'
                 echo 'Build stage passed'
             }
         }
