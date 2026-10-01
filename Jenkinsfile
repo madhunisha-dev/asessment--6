@@ -6,21 +6,19 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/madhunisha-dev/asessment--6.git'
+                    url: 'https://github.com/madhunisha-dev/milestoree.git'
             }
         }
 
         stage('Build') {
             steps {
                 bat 'python -m py_compile app.py'
-                milestone(1)
-                echo 'Build stage passed milestone 1'
+                echo 'Build stage passed'
             }
         }
 
         stage('Deploy') {
             steps {
-                milestone(2)
                 echo 'Deploying application...'
             }
         }
